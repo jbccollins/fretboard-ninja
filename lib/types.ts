@@ -24,6 +24,11 @@ export enum FretboardInlay {
   'DoubleDot' = 'DoubleDot',
 }
 
+export enum ActiveButtonIdStatus {
+  CORRECT = 'correct',
+  INCORRECT = 'incorrect'
+}
+
 export type FretString = {
   fret: number;
   string: number;

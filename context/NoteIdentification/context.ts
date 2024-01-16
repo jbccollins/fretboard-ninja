@@ -4,7 +4,6 @@ import { createContext, useContext } from 'react';
 
 export type NoteIdentificationContextValue = {
 	currentIdentification: FretString;
-	lastIdentification: FretString;
 	options: FretStringNote[];
 };
 
@@ -16,10 +15,6 @@ export type NoteIdentificationContext = {
 const defaultNoteIdentificationContext: NoteIdentificationContext = {
 	value: {
 		currentIdentification: {
-			fret: -1,
-			string: -1,
-		},
-		lastIdentification: {
 			fret: -1,
 			string: -1,
 		},

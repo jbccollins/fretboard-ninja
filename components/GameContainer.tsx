@@ -24,7 +24,7 @@ export default function GameContainer() {
                 <div className='fretboard-container mx-auto h-[calc(100%-120px)] w-full max-w-64'>
                     <Fretboard />
                 </div>
-                <div className='game-controls-container mx-auto h-[120px] w-full max-w-64 bg-red'>
+                <div className='game-controls-container mx-auto h-[120px] w-full max-w-64 bg-darkgrey'>
                     <Controls />
                 </div>
             </div>

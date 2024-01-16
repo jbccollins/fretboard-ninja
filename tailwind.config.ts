@@ -19,6 +19,7 @@ const config: Config = {
       colors: {
         tan: '#D2B48C',
         red: '#FF0000',
+        darkgrey: '#585858',
       },
     },
   },
