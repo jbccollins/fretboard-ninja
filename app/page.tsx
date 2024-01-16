@@ -1,9 +1,9 @@
-import GameContainer from '@/components/GameContainer'
+import GameContainer from '@/components/GameContainer';
 
 export default function Home() {
   return (
-    <main className="h-full">
+    <main className='h-screen w-screen'>
       <GameContainer />
     </main>
-  )
+  );
 }

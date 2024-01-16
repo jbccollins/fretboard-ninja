@@ -1,11 +1,33 @@
-import Fretboard from "./Fretboard/Fretboard";
+'use client';
+
+import {
+    NoteIdentificationContext,
+    NoteIdentificationContextValue,
+    getDefaultNoteIdentificationContextValue,
+} from '@/context/NoteIdentification/context';
+import Fretboard from './Fretboard/Fretboard';
+import { useState } from 'react';
+import Controls from './Controls/Controls';
+
+const defaultNoteIdentificationContextValue = getDefaultNoteIdentificationContextValue();
 
 export default function GameContainer() {
+    const [noteIdentificationContextValue, setNoteIdentificationContextValue] =
+        useState<NoteIdentificationContextValue>(defaultNoteIdentificationContextValue);
+    const noteIdentificationContext = {
+        value: noteIdentificationContextValue,
+        setValue: setNoteIdentificationContextValue,
+    };
     return (
-        <div className="h-full relative">
-            <div className="h-full w-full max-w-96 mx-auto">
-                <Fretboard />
+        <NoteIdentificationContext.Provider value={noteIdentificationContext}>
+            <div className='relative h-full'>
+                <div className='fretboard-container mx-auto h-[calc(100%-120px)] w-full max-w-64'>
+                    <Fretboard />
+                </div>
+                <div className='game-controls-container mx-auto h-[120px] w-full max-w-64 bg-red'>
+                    <Controls />
+                </div>
             </div>
-        </div>
-    )
-} 
+        </NoteIdentificationContext.Provider>
+    );
+}

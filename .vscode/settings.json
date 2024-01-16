@@ -1,4 +1,13 @@
 {
-    "editor.formatOnSave": true,
-    "css.lint.unknownAtRules": "ignore"
+  "editor.formatOnSave": true,
+  "css.lint.unknownAtRules": "ignore",
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "[typescriptreact]": {
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  }
 }
